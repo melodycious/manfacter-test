@@ -15,7 +15,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          <h1 className="text-3xl font-bold underline">
+              Testing Tailwind manfacter
+          </h1>
         </a>
       </header>
     </div>

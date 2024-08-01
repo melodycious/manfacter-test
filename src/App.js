@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+/* import Navbar from './components/navbar/Navbar'; */
+import Sidebar from './component/sidebar/Sidebar.js';
+import Navbar from './component/navbar/Navbar.js';
 import './App.css';
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h1 className="text-3xl font-bold underline">
-              Testing Tailwind manfacter
-          </h1>
-        </a>
-      </header>
+    <div className="flex h-screen">
+      <Sidebar isOpen={sidebarOpen} toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
+      <div className="flex-1 flex flex-col">
+        <Navbar toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
+        <main className="flex-1 p-6 bg-gray-100">
+          {/* Aquí iría el contenido de tu aplicación */}
+          <h1 className="text-2xl font-bold">Dashboard</h1>
+        </main>
+      </div>
     </div>
   );
 }

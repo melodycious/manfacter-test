@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 /* import Navbar from './components/navbar/Navbar'; */
 import Sidebar from './component/sidebar/Sidebar.js';
 import Navbar from './component/navbar/Navbar.js';
+import Dashboard from './component/dashboard/Dashboard.js';
 import './App.css';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <Navbar toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
         <main className="flex-1 p-6 bg-gray-100">
           {/* Aquí iría el contenido de tu aplicación */}
-          <h1 className="text-2xl font-bold">Dashboard</h1>
+          <h1 className="text-2xl font-bold"><Dashboard /></h1>
         </main>
       </div>
     </div>

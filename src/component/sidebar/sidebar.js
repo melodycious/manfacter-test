@@ -1,64 +1,62 @@
 import React from 'react';
-import { FaHome, FaShoppingCart, FaBoxOpen, FaTruck, FaUndo, FaRegQuestionCircle } from 'react-icons/fa';
+import { FaHome, FaShoppingCart, FaBoxOpen, FaTruck, FaUndo, FaRegQuestionCircle, FaRegCreditCard } from 'react-icons/fa';
 import { CgProfile } from "react-icons/cg";
-import { BiArrowToLeft } from "react-icons/bi";
+import { BiArrowToLeft, BiArrowToRight } from "react-icons/bi";
+import { GiSandsOfTime } from "react-icons/gi";
 import whitelogo from '../sidebar/logoblanco.png';
+import icon from '../sidebar/icon.png';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
-    <div className={`flex flex-col bg-blue-700 text-white h-screen transition-width duration-300 ${isOpen ? 'w-64' : 'w-16'}`}>
-      <div className="flex items-center justify-between p-4">
-        <div className={`${isOpen ? 'block' : 'hidden'} text-xl`}>
-          <img src={whitelogo} className="logo" alt="Logo" />
+    <div className={`flex flex-col bg-blue-700 text-white  transition-all duration-300 ${isOpen ? 'w-64' : 'w-18'}`}>
+
+        <div className="flex items-center justify-between p-4">
+        <img
+            src={isOpen ? whitelogo : icon }
+            className="logo p-3"
+            alt={isOpen ? "Logo blanco" : "Logo icono"}
+        />
         </div>
-        <button onClick={toggleSidebar} className="text-white">
-          {isOpen ? '<' : '>'}
-        </button>
-      </div>
       <nav className="flex flex-col flex-1 p-4">
         <a href="#" className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
-          <FaHome />
+          <FaHome size={24} />
           <span className={`${isOpen ? 'block' : 'hidden'} ml-4`}>Order</span>
         </a>
         <a href="#" className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
-          <FaShoppingCart />
+          <FaShoppingCart size={24} />
           <span className={`${isOpen ? 'block' : 'hidden'} ml-4`}>Manage cart</span>
         </a>
         <a href="#" className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
-          <FaBoxOpen />
+          <FaRegCreditCard size={24} />
           <span className={`${isOpen ? 'block' : 'hidden'} ml-4`}>Unpaid</span>
         </a>
         <a href="#" className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
-          <FaTruck />
+          <GiSandsOfTime size={24} />
           <span className={`${isOpen ? 'block' : 'hidden'} ml-4`}>Processing</span>
         </a>
         <a href="#" className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
-          <FaUndo />
+          <FaTruck size={24} />
           <span className={`${isOpen ? 'block' : 'hidden'} ml-4`}>Shipped</span>
         </a>
         <a href="#" className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
-          <FaUndo />
+          <FaUndo size={24} />
           <span className={`${isOpen ? 'block' : 'hidden'} ml-4`}>Returns</span>
         </a>
       </nav>
 
-      <nav className="align-bottom py-2 p-4">
+      <nav className="flex flex-col p-4">
         <a href="#" className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
-          <CgProfile />
+          <CgProfile size={24} />
           <span className={`${isOpen ? 'block' : 'hidden'} ml-4`}>Profile</span>
         </a>
         <a href="#" className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
-          <FaRegQuestionCircle />
+          <FaRegQuestionCircle size={24} />
           <span className={`${isOpen ? 'block' : 'hidden'} ml-4`}>Need help?</span>
         </a>
-        <a href="#" className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
-            <BiArrowToLeft />
-            <button onClick={toggleSidebar} className="text-white hover:bg-white rounded hover:text-blue-800">
-            <span className={`${isOpen ? 'block' : 'hidden'} ml-4`}>Hide Sidebar</span>
-        </button>
-          
-        </a>
         
+        <button onClick={toggleSidebar} className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
+          {isOpen ? <BiArrowToLeft size={24} /> : <BiArrowToRight size={24} />}<span className={`${isOpen ? 'block' : 'hidden'} ml-4`}>Hide Sidebar</span>
+          </button>
         
       </nav>
     </div>

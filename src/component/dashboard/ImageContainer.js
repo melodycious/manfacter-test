@@ -11,6 +11,16 @@ const ImageContainer = () => {
     setIsModalOpen(false);
   };
 
+  const modalOverlay = {
+    position: 'fixed',
+    inset: '0',
+    background: 'rgba(0, 0, 0, 0.5)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: '1000',
+  }
+
   return (
     <div className="justify-center mb-4">
         <img
@@ -26,7 +36,7 @@ const ImageContainer = () => {
       </div>
 
       {isModalOpen && (
-        <div
+        <div style={modalOverlay}
           className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
           onClick={handleCloseModal}
         >

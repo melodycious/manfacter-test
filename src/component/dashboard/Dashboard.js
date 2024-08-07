@@ -1,11 +1,12 @@
 import React from 'react'
-import Progress from '../dashboard/Progress'
+import Progress from './progress/Progress'
 import ImageContainer from '../dashboard/ImageContainer';
 const Dashboard = () => {
     return (
         <div className="container mx-auto p-4">
             <div className="grid grid-cols-3 gap-4">
-                {/* Left Column */}
+            <Progress />
+            <ImageContainer />
                 <div className="col-span-1">
                     <div className="bg-gray-100 p-4 rounded-lg shadow-md">
                         <div className="text-lg font-bold mb-4">Upload 3D model</div>

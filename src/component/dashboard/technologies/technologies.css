@@ -11,3 +11,11 @@
     border-radius: 5%;
   }
 
+  .technology-card p {
+    font-size: 12px; 
+  }
+
+  .technology-card button {
+    font-size: 8px;
+    line-height: 1.2;
+  }

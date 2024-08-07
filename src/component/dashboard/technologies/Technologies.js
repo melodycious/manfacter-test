@@ -49,16 +49,20 @@ const Technologies = () => {
   ];
 
   return (
-    <div className="technology-container">
+    <div className="grid gap-4 col-span-4">
+    <div className="technology-container gap-2 place-content-start">
       {technologies.map((tech) => (
         <div key={tech.name} className="technology-card">
           <h3 className="text-xs">{tech.name}</h3>
           <img src={tech.image} alt={tech.name} />
           <p className="text-xs font-normal">{tech.description}</p>
-          <button className="bg-blue-500 text-white p-1 rounded text-xs font-normal">{tech.moreInfo}</button>
+          <button className="bg-blue-500 text-white p-2 rounded font-normal">{tech.moreInfo}</button>
         </div>
       ))}
     </div>
+
+    </div>
+    
   );
 };
 

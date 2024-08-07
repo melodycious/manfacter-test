@@ -1,5 +1,6 @@
 import React from 'react'
-
+import Progress from '../dashboard/Progress'
+import ImageContainer from '../dashboard/ImageContainer';
 const Dashboard = () => {
     return (
         <div className="container mx-auto p-4">
@@ -9,7 +10,8 @@ const Dashboard = () => {
                     <div className="bg-gray-100 p-4 rounded-lg shadow-md">
                         <div className="text-lg font-bold mb-4">Upload 3D model</div>
                         <div className="bg-white p-4 rounded-lg shadow-md mb-4">
-                            {/* Upload button and file list */}
+                            <Progress />
+                            <ImageContainer />
                             <div className="mb-2">Manifold_v01.stl</div>
                             <div>Order3859420.zip</div>
                             <ul className="list-disc ml-4">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHome, FaShoppingCart, FaBoxOpen, FaTruck, FaUndo, FaRegQuestionCircle, FaRegCreditCard } from 'react-icons/fa';
+import { FaHome, FaShoppingCart, FaTruck, FaUndo, FaRegQuestionCircle, FaRegCreditCard } from 'react-icons/fa';
 import { CgProfile } from "react-icons/cg";
 import { BiArrowToLeft, BiArrowToRight } from "react-icons/bi";
 import { GiSandsOfTime } from "react-icons/gi";

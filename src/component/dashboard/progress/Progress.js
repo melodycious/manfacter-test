@@ -15,7 +15,7 @@ const Progress = () => {
       </li>
       <li className="progress-item">
         <div className="icon-container"><GiDroplets className="icon" /></div>
-        <p className="progress-text text-xs text-blue-500 p-2">Customize your order</p>
+        <p className="progress-text text-xs text-blue-700 p-2">Customize your order</p>
       </li>
       <li className="progress-item">
         <div className="icon-container-not"><FaTruckFast className="icon-not" /></div>

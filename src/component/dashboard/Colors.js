@@ -9,7 +9,7 @@ const Colors = ({ colors }) => {
     };
 
   return (
-    < div className="text-lg font-bold mb-4 text-blue-600">Colors
+    < div className="text-sm font-bold mb-4 text-blue-600">Colors
         <ul className="text-black">
           {colors.map((color) => (
               <li key={color.name} className="color-item flex items-center px-0 pb-6">

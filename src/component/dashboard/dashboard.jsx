@@ -1,14 +1,14 @@
 import React from 'react'
-import Progress from './progress/Progress'
-import ImageContainer from '../dashboard/ImageContainer';
-import Technologies from './technologies/Technologies';
-import Colors from './Colors';
-/* import FileUploader from './FileUploader';  */
+import Progress from './progress/progress.jsx';
+import ImageContainer from './imageContainer.jsx';
+import Technologies from './technologies/technologies.jsx';
+import Colors from './colors.jsx';
+/* import FileUploader from './fileUploader.jsx';  */
 
 const Dashboard = () => {
 
     const colors = [
-        { name: 'White', hex: 'bg-white' },
+        { name: 'White', hex: 'bg-slate-50' },
         { name: 'Black', hex: 'bg-black' },
         { name: 'Anthracite', hex: 'bg-gray-500' },
         { name: 'Blue', hex: 'bg-blue-500' },

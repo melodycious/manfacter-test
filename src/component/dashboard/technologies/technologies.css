@@ -7,16 +7,25 @@
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
-    width: 70px;
+    width: 80px;
     border-radius: 5%;
   }
 
   .technology-card p {
-    font-size: 12px; 
+    font-size: 8px; 
+    line-height: 1.2;
+  }
+
+  .technology-card h3 {
+    font-size: 10px; 
+  }
+
+  .technology-card img {
+    width: 60px; 
   }
 
   .technology-card button {
-    font-size: 8px;
+    font-size: 6px;
     line-height: 1.2;
   }
 

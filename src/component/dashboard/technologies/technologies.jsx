@@ -52,14 +52,14 @@ const Technologies = () => {
 
   return (
     <div>
-      <div className="grid technology-container grid-gap-2 place-content-start grid-cols-3">
+      <div className="grid technology-container grid-gap-2 p-1 place-content-start grid-cols-3">
         {technologies.map((tech) => (
           <div key={tech.name} className="technology-card">
             <h3 className="text-xs">{tech.name}</h3>
             <img src={tech.image} alt={tech.name} />
             <p className="text-xs font-normal">{tech.description}</p>
             <button
-              className="bg-blue-500 text-white p-2 rounded font-normal"
+              className="bg-blue-500 text-white p-1 rounded font-normal"
               onClick={() => setSelectedTech(tech)}
             >
               More information

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import Sidebar from './component/sidebar/Sidebar.js';
-import Navbar from './component/navbar/Navbar.js';
-import Dashboard from './component/dashboard/Dashboard.js';
+import Sidebar from './component/sidebar/sidebar.jsx';
+import Navbar from './component/navbar/navbar.jsx';
+import Dashboard from './component/dashboard/dashboard.jsx';
+import Chatbot from './component/chatbot/chatbot.jsx';
 import './App.css';
 
 function App() {
@@ -10,10 +11,10 @@ function App() {
   return (
        <>
        <Navbar  />
+       <Chatbot />
        <div className="flex h-screen">
          <Sidebar isOpen={sidebarOpen} toggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
          <div className="flex-1 flex flex-col">
-
           <main className="flex-1 p-6 ">
             <h1 className="text-2xl font-bold">
               <Dashboard />

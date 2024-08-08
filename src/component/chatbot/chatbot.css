@@ -5,14 +5,14 @@
     width: 300px;
   }
   
-  .chatbot-toggle {
+/*   .chatbot-toggle {
     background-color: #007bff;
     color: white;
-    border: none;
+    border: none; 
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-  }
+  } */
   
   .chatbot-window {
     display: flex;

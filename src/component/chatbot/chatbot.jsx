@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './chatbot.css'; 
+import { BsChatRightDotsFill } from "react-icons/bs";
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +45,7 @@ const Chatbot = () => {
   return (
     <div className={`chatbot-container ${isOpen ? 'open' : ''}`}>
       <button className="chatbot-toggle" onClick={toggleChat}>
-        Chat
+      <BsChatRightDotsFill className="h-10 w-10 text-orange-600"/>
       </button>
       {isOpen && (
         <div className="chatbot-window">

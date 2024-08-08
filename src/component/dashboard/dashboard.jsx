@@ -3,6 +3,7 @@ import Progress from './progress/progress.jsx';
 import ImageContainer from './imageContainer.jsx';
 import Technologies from './technologies/technologies.jsx';
 import Colors from './colors.jsx';
+import QuantityCard from './quantityCard.jsx';
 /* import FileUploader from './fileUploader.jsx';  */
 
 const Dashboard = () => {
@@ -37,7 +38,7 @@ const Dashboard = () => {
                         <div className="text-sm font-bold mb-4 text-blue-600">Select Production Technology</div>
                                 <Technologies />
     
-                        <div className="text-sm font-bold mb-4 text-blue-600">Select Material</div>
+                        <div className="text-sm font-bold mb-4 mt-3 text-blue-600">Select Material</div>
                         <select className="bg-white p-2 text-sm rounded mb-4 border-2 w-full">
                             <option>ABS</option>
                             <option>PLA</option>
@@ -69,8 +70,7 @@ const Dashboard = () => {
                         <hr class="my-4 border-b border-gray-200" />
 
                         <div className="text-sm font-bold mb-4 text-blue-600">Quantity</div>
-                        <input type="number" className="bg-white p-2 rounded mb-4 w-full" value="1" />
-                        
+                        <QuantityCard />
                     </div>
                 </div>
 
@@ -85,12 +85,20 @@ const Dashboard = () => {
                         <hr class="my-4 border-b border-gray-200" />
 
                         <div className="text-sm font-bold mt-4 text-blue-600">Resume</div>
-                        <div className="justify-items-center">
-                            <div className="text-sm">Per part: 25.30€</div>
-                            <div className="text-sm">Quantity: 1</div>
-                            <div className="text-sm">Total: 25.30€</div>
-                        </div>
-                       
+                                <div className="grid grid-cols-2 gap-4 pt-3">
+                                <div className="text-left">
+                                    <div className="text-sm">Per part</div>
+                                    <div className="text-sm">Quantity</div>
+                                    <div className="text-sm">Total</div>
+                                </div>
+                                <div className="text-right">
+                                    <div className="text-sm">25.30€</div>
+                                    <div className="text-sm">1</div>
+                                    <div className="text-sm">25.30€</div>
+                                </div>
+                                </div>
+                        <hr class="my-4 border-b border-gray-200" />     
+
                     </div>
                 </div>
             </div>

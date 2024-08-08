@@ -3,6 +3,7 @@ import Progress from './progress/Progress'
 import ImageContainer from '../dashboard/ImageContainer';
 import Technologies from './technologies/Technologies';
 import Colors from './Colors';
+/* import FileUploader from './FileUploader';  */
 
 const Dashboard = () => {
 
@@ -18,9 +19,11 @@ const Dashboard = () => {
 
     return (
         <div className="container mx-auto p-4">
-            <div className="grid grid-cols-4 gap-4 col-span-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Progress />
             <ImageContainer />
+            
+
                             {/* <div className="mb-2">Manifold_v01.stl</div>
                             <div>Order3859420.zip</div>
                             <ul className="list-disc ml-4">
@@ -29,13 +32,11 @@ const Dashboard = () => {
                                 <li>Part_304.stl</li>
                             </ul> */}
                     
-                {/* Middle Column */}
                 <div className="col-span-1">
                     <div className="">
                         <div className="text-sm font-bold mb-4 text-blue-600">Select Production Technology</div>
-                        <div className="grid grid-cols-2 gap-2 mb-4">
                                 <Technologies />
-                        </div>
+    
                         <div className="text-sm font-bold mb-4 text-blue-600">Select Material</div>
                         <select className="bg-white p-2 text-sm rounded mb-4 border-2 w-full">
                             <option>ABS</option>
@@ -73,7 +74,6 @@ const Dashboard = () => {
                     </div>
                 </div>
 
-                {/* Right Column */}
                 <div className="col-span-1">
                     <div className="">
                         <div className="text-sm font-bold mb-4 text-blue-600">Technical Specifications</div>

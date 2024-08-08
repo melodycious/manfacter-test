@@ -51,8 +51,8 @@ const Technologies = () => {
   const [selectedTech, setSelectedTech] = useState(null);
 
   return (
-    <div className="grid gap-4 col-span-4">
-      <div className="technology-container gap-2 place-content-start">
+    <div>
+      <div className="grid technology-container grid-gap-2 place-content-start grid-cols-3">
         {technologies.map((tech) => (
           <div key={tech.name} className="technology-card">
             <h3 className="text-xs">{tech.name}</h3>

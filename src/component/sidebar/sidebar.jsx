@@ -8,7 +8,7 @@ import icon from '../sidebar/icon.png';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
-    <div className={`flex flex-col bg-blue-700 text-white rounded-r-lg mt-3 duration-300 ${isOpen ? 'w-64' : 'w-18'}`}>
+    <div className={`flex flex-col bg-blue-900 text-white rounded-r-lg mt-3 duration-300 ${isOpen ? 'w-64' : 'w-18'}`}>
 
         <div className="flex items-center justify-between p-3">
         <img

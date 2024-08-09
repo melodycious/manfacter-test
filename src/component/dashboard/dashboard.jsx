@@ -32,15 +32,19 @@ const Dashboard = () => {
 
 
     return (
-        <div className="container mx-auto p-4">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
-                <div className="lg:col-span-2 space-y-4">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      <div className="col-span-1">
+        <div className="container mx-auto p-2">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="lg:col-span-1 space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-4">
+                      <div className="col-span-1 -ml-4">
                             <Progress />
                       </div>
-                      <div className="col-span-2 ml-2">
+                      <div className="col-span-3 ml-12">
                             <ImageContainer />
+                            <div className="text-center text-xs">
+                                <p className="text-gray-600 font-normal"><b>Size:</b> 124.9 x 199.5 x 385 mm</p>
+                                <p className="text-gray-600 font-normal"><b>Volume:</b> 9.62 cm<sup>3</sup></p>
+                            </div>
                         </div>
                     </div>
                         <FileUploader onFileSelect={handleFileSelect} />
@@ -48,9 +52,9 @@ const Dashboard = () => {
         
                     
             <div className="lg:col-span-1">
-                    <div className="text-sm font-bold mb-4 text-blue-600">Select Production Technology</div>
+                    <div className="text-sm font-bold mb-1 text-blue-900">Select Production Technology</div>
                         <Technologies />
-                        <div className="text-sm font-bold mb-4 mt-3 text-blue-600">Select Material</div>
+                        <div className="text-sm font-bold mb-4 mt-3 text-blue-900">Select Material</div>
                         <select className="bg-white p-2 text-sm rounded mb-4 border-2 w-full">
                             <option>ABS</option>
                             <option>PLA</option>
@@ -58,14 +62,14 @@ const Dashboard = () => {
                         
                         <div className="grid grid-cols-2 gap-4">
                             <div>
-                                <div className="text-sm font-bold mb-4 text-blue-600">Layer Height</div>
+                                <div className="text-sm font-bold mb-4 text-blue-900">Layer Height</div>
                                 <select className="bg-white p-2 text-sm rounded mb-4 border-2 w-full">
                                 <option>0.2mm</option>
                                 <option>0.4mm</option>
                                 </select>
                             </div>
                             <div>
-                                <div className="text-sm font-bold mb-4 text-blue-600">Infill</div>
+                                <div className="text-sm font-bold mb-4 text-blue-900">Infill</div>
                                 <select className="bg-white p-2 text-sm rounded mb-4 border-2 w-full">
                                 <option>40%</option>
                                 <option>50%</option>
@@ -74,19 +78,19 @@ const Dashboard = () => {
                             </div>
                         <hr class="my-4 border-b border-gray-200" />
 
-                        <div className="text-sm font-bold mb-4 text-blue-600">Post Production</div>
+                        <div className="text-sm font-bold mb-4 text-blue-900">Post Production</div>
                         <select className="bg-white p-2 text-sm rounded mb-4 border-2 w-full">
                             <option>None</option>
                         </select>
 
                         <hr class="my-4 border-b border-gray-200" />
 
-                        <div className="text-sm font-bold mb-4 text-blue-600">Quantity</div>
+                        <div className="text-sm font-bold mb-4 text-blue-900">Quantity</div>
                         <QuantityCard fileName={fileName}/>
                     </div>
 
                 <div className="lg:col-span-1">
-                        <div className="text-sm font-bold mb-4 text-blue-600">Technical Specifications</div>
+                        <div className="text-sm font-bold mb-4 text-blue-900">Technical Specifications</div>
                         <div className="flex items-center justify-between">
                                 <div className="text-start">
                                 <input
@@ -113,7 +117,7 @@ const Dashboard = () => {
                         
                         <hr class="my-4 border-b border-gray-200" />
 
-                        <div className="text-sm font-bold mt-4 text-blue-600">Resume</div>
+                        <div className="text-sm font-bold mt-4 text-blue-900">Resume</div>
                                 <div className="grid grid-cols-2 gap-4 pt-3">
                                 <div className="text-left">
                                     <div className="text-sm">Per part</div>

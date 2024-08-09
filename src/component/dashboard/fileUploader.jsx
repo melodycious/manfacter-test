@@ -6,6 +6,7 @@ import { TiDownload } from "react-icons/ti";
 const FileUploader = ({ onFileSelect }) => {
   const [fileName, setFileName] = useState('Manifold_v01.stl');
   const [uploadedFiles, setUploadedFiles] = useState([
+    'Order3859420.zip',
     'Threads_v01.stl',
     'Manifold_v03.stl',
     'Part_304.stl',

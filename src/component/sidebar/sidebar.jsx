@@ -8,16 +8,16 @@ import icon from '../sidebar/icon.png';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
-    <div className={`flex flex-col bg-blue-700 text-white  transition-all duration-300 ${isOpen ? 'w-64' : 'w-18'}`}>
+    <div className={`flex flex-col bg-blue-700 text-white rounded-r-lg mt-3 duration-300 ${isOpen ? 'w-64' : 'w-18'}`}>
 
-        <div className="flex items-center justify-between p-4">
+        <div className="flex items-center justify-between p-3">
         <img
             src={isOpen ? whitelogo : icon }
             className="logo p-3"
             alt={isOpen ? "Logo blanco" : "Logo icono"}
         />
         </div>
-      <nav className="flex flex-col flex-1 p-4">
+      <nav className="flex flex-col flex-1 p-3">
         <a href="#" className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
           <FaHome size={24} />
           <span className={`${isOpen ? 'block' : 'hidden'} ml-4`}>Order</span>
@@ -44,7 +44,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         </a>
       </nav>
 
-      <nav className="flex flex-col p-4">
+      <nav className="flex flex-col p-3">
         <a href="#" className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
           <CgProfile size={24} />
           <span className={`${isOpen ? 'block' : 'hidden'} ml-4`}>Profile</span>

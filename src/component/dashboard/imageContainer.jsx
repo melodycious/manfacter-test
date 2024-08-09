@@ -28,7 +28,7 @@ const ImageContainer = () => {
         <img
           src="/imagen3d.jpg"
           alt="3D Model"
-          className="cursor-pointer"
+          className="cursor-pointer rounded-lg"
           onClick={handleImageClick}
         />
       
@@ -41,8 +41,8 @@ const ImageContainer = () => {
             </div>
       </div>
       <div className="text-center text-sm">
-        <p className="text-gray-600"><b>Size:</b> 124.9 x 199.5 x 385 mm</p>
-        <p className="text-gray-600"><b>Volume:</b> 9.62 cm<sup>3</sup></p>
+        <p className="text-gray-600 font-normal"><b>Size:</b> 124.9 x 199.5 x 385 mm</p>
+        <p className="text-gray-600 font-normal"><b>Volume:</b> 9.62 cm<sup>3</sup></p>
       </div>
 
       {isModalOpen && (

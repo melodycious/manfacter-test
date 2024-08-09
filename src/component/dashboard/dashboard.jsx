@@ -33,21 +33,27 @@ const Dashboard = () => {
 
     return (
         <div className="container mx-auto p-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <Progress />
-            <ImageContainer />
-            <FileUploader onFileSelect={handleFileSelect} />
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+                <div className="lg:col-span-2 space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div className="col-span-1">
+                            <Progress />
+                      </div>
+                      <div className="col-span-2 ml-2">
+                            <ImageContainer />
+                        </div>
+                    </div>
+                        <FileUploader onFileSelect={handleFileSelect} />
                 <div className="mt-4">
                     <h2 className="text-xl">Archivo Seleccionado:</h2>
-                    <p>{fileName}</p>
+                        <p>{fileName}</p>
                 </div>
+            </div>
         
                     
-                <div className="col-span-1">
-                    <div className="">
-                        <div className="text-sm font-bold mb-4 text-blue-600">Select Production Technology</div>
-                                <Technologies />
-    
+            <div className="lg:col-span-1">
+                    <div className="text-sm font-bold mb-4 text-blue-600">Select Production Technology</div>
+                        <Technologies />
                         <div className="text-sm font-bold mb-4 mt-3 text-blue-600">Select Material</div>
                         <select className="bg-white p-2 text-sm rounded mb-4 border-2 w-full">
                             <option>ABS</option>
@@ -82,10 +88,8 @@ const Dashboard = () => {
                         <div className="text-sm font-bold mb-4 text-blue-600">Quantity</div>
                         <QuantityCard fileName={fileName}/>
                     </div>
-                </div>
 
-                <div className="col-span-1">
-                    <div className="">
+                <div className="lg:col-span-1">
                         <div className="text-sm font-bold mb-4 text-blue-600">Technical Specifications</div>
                         <div className="flex items-center justify-between">
                                 <div className="text-start">
@@ -131,7 +135,6 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
-        </div>
     );
 };
 

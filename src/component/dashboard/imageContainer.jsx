@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { BsArrowsAngleExpand } from "react-icons/bs";
+import { BsBox } from "react-icons/bs";
 
 const ImageContainer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,7 +24,7 @@ const ImageContainer = () => {
   }
 
   return (
-    <div className="justify-center mb-4">
+    <div className="justify-center mb-4 relative">
         <img
           src="/imagen3d.jpg"
           alt="3D Model"
@@ -30,6 +32,14 @@ const ImageContainer = () => {
           onClick={handleImageClick}
         />
       
+      <div className="absolute right-2 -mt-10 flex">
+            <div className="flex items-center justify-center bg-white rounded-full p-2">
+                <BsBox className="w-4 h-4 text-gray-600 cursor-pointer" />
+            </div>
+            <div className="flex items-center justify-center bg-white rounded-full p-2 ml-2">
+                <BsArrowsAngleExpand className="w-3 h-3 text-gray-600 cursor-pointer" onClick={handleImageClick} />
+            </div>
+      </div>
       <div className="text-center text-sm">
         <p className="text-gray-600"><b>Size:</b> 124.9 x 199.5 x 385 mm</p>
         <p className="text-gray-600"><b>Volume:</b> 9.62 cm<sup>3</sup></p>

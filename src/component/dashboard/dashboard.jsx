@@ -99,7 +99,7 @@ const Dashboard = () => {
                                     Choose pdf
                                 </label>
                                 </div>
-                                <div className="text-right bg-slate-200 rounded-full p-2">
+                                <div className="text-xs leading-5 bg-slate-400/10 rounded-full py-1 px-3 flex items-center space-x-2 hover:bg-slate-400/20 dark:highlight-white/5">
                                 <span className="text-gray-700 text-xs">{selectedFile}</span>
                                 <span className="ml-2 text-blue-600 cursor-pointer font-mono text-sm">X</span>
                                 </div>

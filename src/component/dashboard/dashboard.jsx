@@ -9,17 +9,16 @@ import FileUploader from './fileUploader.jsx';
 const Dashboard = () => {
 
     const [selectedFile, setSelectedFile] = useState('model_sheet_tec.pdf');
+    const [fileName, setFileName] = useState('part_v01.stl');
 
     const handleFileChange = (event) => {
             setSelectedFile(event.target.files[0].name);
          };
 
-    const [selectedFileName, setSelectedFileName] = useState('');
-
     const handleFileSelect = (fileName) => {
-           setSelectedFileName(fileName);
-           // Aquí puedes usar el nombre del archivo seleccionado en otro componente
+           setFileName(fileName);
          };
+         
 
     const colors = [
         { name: 'White', hex: 'bg-slate-50' },
@@ -38,19 +37,11 @@ const Dashboard = () => {
             <Progress />
             <ImageContainer />
             <FileUploader onFileSelect={handleFileSelect} />
-      <div className="mt-4">
-        <h2 className="text-xl">Archivo Seleccionado:</h2>
-        <p>{selectedFileName}</p>
-      </div>
-            
-
-                            {/* <div className="mb-2">Manifold_v01.stl</div>
-                            <div>Order3859420.zip</div>
-                            <ul className="list-disc ml-4">
-                                <li>Threads_v01.stl</li>
-                                <li>Manifold_v03.stl</li>
-                                <li>Part_304.stl</li>
-                            </ul> */}
+                <div className="mt-4">
+                    <h2 className="text-xl">Archivo Seleccionado:</h2>
+                    <p>{fileName}</p>
+                </div>
+        
                     
                 <div className="col-span-1">
                     <div className="">
@@ -89,7 +80,7 @@ const Dashboard = () => {
                         <hr class="my-4 border-b border-gray-200" />
 
                         <div className="text-sm font-bold mb-4 text-blue-600">Quantity</div>
-                        <QuantityCard />
+                        <QuantityCard fileName={fileName}/>
                     </div>
                 </div>
 

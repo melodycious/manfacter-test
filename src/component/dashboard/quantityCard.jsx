@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { MdMoreVert } from "react-icons/md";
 
-const QuantityCard = () => {
+const QuantityCard = ({ fileName }) => {
   const [quantity, setQuantity] = useState(1);
   const [enabled, setEnabled] = useState(true);
 
@@ -18,9 +18,9 @@ const QuantityCard = () => {
     <div className="p-3 bg-white border-2 rounded-lg flex flex-col items-start justify-between">
       
       <div className="w-full flex justify-between items-center mb-4">
-        <div className="flex items-center">
+        <div className="flex items-center ">
         <button
-          className={`w-8 h-4 rounded-full focus:outline-none transition-colors ${
+          className={`w-8 h-4 rounded-full focus:outline-none transition-colors drop-shadow-md ${
             enabled ? 'bg-blue-500' : 'bg-gray-300'
           }`}
           onClick={toggleEnabled}
@@ -69,7 +69,7 @@ const QuantityCard = () => {
           className="w-16 h-16 rounded-md mr-4"
           />
           <div>
-            <h2 className="text-sm font-semibold">part_v01.stl</h2>
+            <h2 className="text-sm font-semibold">{fileName}</h2>
             <p className="text-xs text-gray-500">124,9 x 199.5 x 385 mm</p>
           </div>
         </div>

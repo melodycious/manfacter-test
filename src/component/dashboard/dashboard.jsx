@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Progress from './progress/progress.jsx';
 import ImageContainer from './imageContainer.jsx';
 import Technologies from './technologies/technologies.jsx';
@@ -7,6 +7,12 @@ import QuantityCard from './quantityCard.jsx';
 /* import FileUploader from './fileUploader.jsx';  */
 
 const Dashboard = () => {
+
+    const [selectedFile, setSelectedFile] = useState('model_sheet_tec.pdf');
+
+    const handleFileChange = (event) => {
+            setSelectedFile(event.target.files[0].name);
+         };
 
     const colors = [
         { name: 'White', hex: 'bg-slate-50' },
@@ -17,6 +23,7 @@ const Dashboard = () => {
         { name: 'Green', hex: 'bg-green-500' },
         { name: 'Yellow', hex: 'bg-yellow-500' },
       ];
+
 
     return (
         <div className="container mx-auto p-4">
@@ -77,7 +84,26 @@ const Dashboard = () => {
                 <div className="col-span-1">
                     <div className="">
                         <div className="text-sm font-bold mb-4 text-blue-600">Technical Specifications</div>
-                                
+                        <div className="flex items-center justify-between">
+                                <div className="text-start">
+                                <input
+                                    type="file"
+                                    accept=".pdf"
+                                    onChange={handleFileChange}
+                                    className="hidden"
+                                    id="fileInput"
+                                />
+                                <label
+                                    htmlFor="fileInput"
+                                    className="text-sm bg-white border-2 border-blue-600 text-blue-600 py-2 px-4 rounded cursor-pointer"                                 >
+                                    Choose pdf
+                                </label>
+                                </div>
+                                <div className="text-right bg-slate-200 rounded-full p-2">
+                                <span className="text-gray-700 text-xs">{selectedFile}</span>
+                                <span className="ml-2 text-blue-600 cursor-pointer font-mono text-sm">X</span>
+                                </div>
+                        </div>
                         <hr class="my-4 border-b border-gray-200" />
 
                         <Colors colors={colors} /> 

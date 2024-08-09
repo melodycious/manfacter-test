@@ -4,7 +4,7 @@ import ImageContainer from './imageContainer.jsx';
 import Technologies from './technologies/technologies.jsx';
 import Colors from './colors.jsx';
 import QuantityCard from './quantityCard.jsx';
-/* import FileUploader from './fileUploader.jsx';  */
+import FileUploader from './fileUploader.jsx'; 
 
 const Dashboard = () => {
 
@@ -12,6 +12,13 @@ const Dashboard = () => {
 
     const handleFileChange = (event) => {
             setSelectedFile(event.target.files[0].name);
+         };
+
+    const [selectedFileName, setSelectedFileName] = useState('');
+
+    const handleFileSelect = (fileName) => {
+           setSelectedFileName(fileName);
+           // Aquí puedes usar el nombre del archivo seleccionado en otro componente
          };
 
     const colors = [
@@ -30,6 +37,11 @@ const Dashboard = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Progress />
             <ImageContainer />
+            <FileUploader onFileSelect={handleFileSelect} />
+      <div className="mt-4">
+        <h2 className="text-xl">Archivo Seleccionado:</h2>
+        <p>{selectedFileName}</p>
+      </div>
             
 
                             {/* <div className="mb-2">Manifold_v01.stl</div>

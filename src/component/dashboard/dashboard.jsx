@@ -44,10 +44,6 @@ const Dashboard = () => {
                         </div>
                     </div>
                         <FileUploader onFileSelect={handleFileSelect} />
-                <div className="mt-4">
-                    <h2 className="text-xl">Archivo Seleccionado:</h2>
-                        <p>{fileName}</p>
-                </div>
             </div>
         
                     

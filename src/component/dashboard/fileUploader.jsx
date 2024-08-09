@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { BsBox } from "react-icons/bs";
+import { FaRegFolderOpen } from "react-icons/fa";
+import { TiDownload } from "react-icons/ti";
 
 const FileUploader = ({ onFileSelect }) => {
   const [fileName, setFileName] = useState('Manifold_v01.stl');
@@ -18,19 +21,21 @@ const FileUploader = ({ onFileSelect }) => {
   };
 
   return (
-    <div className="bg-white shadow rounded-lg p-4">
+    <div className="bg-slate-400/10 rounded-lg p-4">
       <div className="flex justify-between items-center border-b pb-2 mb-4">
-        <span className="text-lg font-semibold">{fileName}</span>
-        <span className="text-blue-600">Analyzing...</span>
+        <span className="text-sm font-semibold">{fileName}</span>
+        <span className="text-sm text-blue-600">Analyzing...</span>
       </div>
       
       <div className="mb-4">
-        <div className="border p-2 rounded-md flex items-center">
-          <span className="text-gray-700 flex-1">{uploadedFiles[0]}</span>
+        <div className="p-2 rounded-md flex items-center">
+        <FaRegFolderOpen size={14} className="mr-2" />
+          <span className="text-xs text-gray-700 flex-1">{uploadedFiles[0]}</span>
         </div>
-        <div className="pl-4">
+        <div className="text-xs pl-6">
           {uploadedFiles.slice(1).map((file, index) => (
-            <div key={index} className="border p-2 rounded-md flex items-center mt-2">
+            <div key={index} className="p-2 rounded-md flex items-center mt-2">
+              <BsBox size={12} className="mr-2" />
               <span className="text-gray-700 flex-1">{file}</span>
             </div>
           ))}
@@ -46,11 +51,14 @@ const FileUploader = ({ onFileSelect }) => {
         />
         <label
           htmlFor="file-upload"
-          className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600"
+          className="text-xs font-normal bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-600"
         >
           Browse Files
         </label>
-        <button className="text-blue-600">Recent uploads</button>
+        <div className="flex text-right text-blue-600">
+        <TiDownload size={28}/>
+        <button className="ml-2 text-xs">Recent uploads</button>
+        </div>
       </div>
     </div>
   );

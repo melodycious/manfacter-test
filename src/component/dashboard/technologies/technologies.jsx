@@ -52,7 +52,7 @@ const Technologies = () => {
 
   return (
     <div>
-      <div className="grid technology-container grid-gap-2 p-1 place-content-start grid-cols-3">
+      <div className="grid technology-container grid-cols-3">
         {technologies.map((tech) => (
           <div key={tech.name} className="technology-card">
             <h3 className="text-xs">{tech.name}</h3>
@@ -68,10 +68,12 @@ const Technologies = () => {
         ))}
       </div>
       {selectedTech && (
-        <div className="info-box bg-blue-100 p-4 rounded">
+        <div className="info-box bg-blue-100 p-3 rounded mt-3">
           <div className="flex items-center">
-            <CiCircleInfo className="h-8 w-8 text-blue-600" />
-            <p className="ml-2 text-xs font-normal text-gray-500">{selectedTech.moreInfo}</p>
+            <div className="me-0"><CiCircleInfo size={24} className="text-blue-600" /></div>
+            <div>
+            <p className="ml-2 text-gray-500 font-normal tracking-tight">{selectedTech.moreInfo}</p>
+            </div>
           </div>
         </div>
       )}

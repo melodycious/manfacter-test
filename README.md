@@ -12,7 +12,7 @@ Dashboard para el e-commerce de Manfacter. Desarrollado utilizando React.js, Jav
 
 #### Objetivo:
 
-The main objective of "Star Wars Explorer" is to provide fans of the Star Wars franchise with an engaging platform to dive deep into the lore of this beloved universe. From discovering the details of your favorite characters to communicating with the enigmatic Jedi Master Yoda, this application aims to deliver a memorable and educational experience.
+El objetivo de este proyecto es demostrar mis habilidades en desarrollo de front-end, llevando a cabo un desarrollo completo de una interfaz web a partir de una imagen previamente ofrecida. Con las imágenes presentadas por el cliente, se ha llevado a cabo el desarrollo de este dashboard lo más fielmente a esas imágenes.
 
 #### Tecnologías utilizadas:
 

@@ -76,14 +76,14 @@ const Dashboard = () => {
                                 </select>
                             </div>
                             </div>
-                        <hr class="my-4 border-b border-gray-200" />
+                        <hr className="my-4 border-b border-gray-200" />
 
                         <div className="text-sm font-bold mb-4 text-blue-900">Post Production</div>
                         <select className="bg-white p-2 text-sm rounded mb-4 border-2 w-full">
                             <option>None</option>
                         </select>
 
-                        <hr class="my-4 border-b border-gray-200" />
+                        <hr className="my-4 border-b border-gray-200" />
 
                         <div className="text-sm font-bold mb-4 text-blue-900">Quantity</div>
                         <QuantityCard fileName={fileName}/>
@@ -111,11 +111,11 @@ const Dashboard = () => {
                                 <span className="ml-2 text-blue-600 cursor-pointer font-mono text-sm">X</span>
                                 </div>
                         </div>
-                        <hr class="my-4 border-b border-gray-200" />
+                        <hr className="my-4 border-b border-gray-200" />
 
                         <Colors colors={colors} /> 
                         
-                        <hr class="my-4 border-b border-gray-200" />
+                        <hr className="my-4 border-b border-gray-200" />
 
                         <div className="text-sm font-bold mt-4 text-blue-900">Resume</div>
                                 <div className="grid grid-cols-2 gap-4 pt-3">
@@ -130,7 +130,7 @@ const Dashboard = () => {
                                     <div className="text-sm">25.30€</div>
                                 </div>
                                 </div>
-                        <hr class="my-4 border-b border-gray-200" />     
+                        <hr className="my-4 border-b border-gray-200" />     
 
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaHome, FaShoppingCart, FaTruck, FaUndo, FaRegQuestionCircle, FaRegCreditCard } from 'react-icons/fa';
 import { CgProfile } from "react-icons/cg";
 import { BiArrowToLeft, BiArrowToRight } from "react-icons/bi";
@@ -6,9 +6,32 @@ import { GiSandsOfTime } from "react-icons/gi";
 import whitelogo from '../sidebar/logoblanco.png';
 import icon from '../sidebar/icon.png';
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+const Sidebar = () => {
+
+  const [isOpen, setIsOpen] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsOpen(false); 
+      } else {
+        setIsOpen(true); 
+      }
+    };
+
+    handleResize(); 
+    window.addEventListener('resize', handleResize); 
+    return () => window.removeEventListener('resize', handleResize); 
+  }, []);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className={`flex flex-col bg-blue-900 text-white rounded-r-lg mt-3 duration-300 ${isOpen ? 'w-64' : 'w-18'}`}>
+    <div className={`flex flex-col bg-blue-900 text-white rounded-r-lg mt-3 duration-300 
+        ${isOpen ? 'w-64' : 'w-18'}
+        ${!isOpen ? 'sm:w-20 md:w-24' : 'sm:w-48 md:w-64'}`}>
 
         <div className="flex items-center justify-between p-3">
         <img

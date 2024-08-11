@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="p-4 flex justify-between items-center bg-white shadow-md">
+    <nav className="p-4 flex justify-between items-center bg-white shadow-md relative z-50">
       <div className="flex items-center">
         <img src={logo} width="180" className="logo" alt="Logo" />
         <div className="hidden md:flex ml-6 space-x-4">
@@ -36,7 +36,7 @@ const Navbar = () => {
         <a href="/" className="px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-700">AI Quotation</a>
       </div>
       {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
+        <div className="absolute top-16 left-0 w-full bg-white shadow-md md:hidden z-50">
           <div className="flex flex-col items-center space-y-4 p-4">
             <a href="/" className="text-gray-700 hover:text-blue-500">Home</a>
             <a href="/" className="text-gray-700 hover:text-blue-500">Services</a>

@@ -51,7 +51,7 @@ const Dashboard = () => {
             </div>
         
                     
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 space-y-4">
                     <div className="text-sm font-bold mb-1 text-blue-900">Select Production Technology</div>
                         <Technologies />
                         <div className="text-sm font-bold mb-4 mt-3 text-blue-900">Select Material</div>
@@ -89,7 +89,7 @@ const Dashboard = () => {
                         <QuantityCard fileName={fileName}/>
                     </div>
 
-                <div className="lg:col-span-1">
+                <div className="lg:col-span-1 space-y-4">
                         <div className="text-sm font-bold mb-4 text-blue-900">Technical Specifications</div>
                         <div className="flex items-center justify-between">
                                 <div className="text-start">

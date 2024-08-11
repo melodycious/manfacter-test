@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaHome, FaShoppingCart, FaTruck, FaUndo, FaRegQuestionCircle, FaRegCreditCard } from 'react-icons/fa';
+import { FaBox, FaShoppingCart, FaTruck, FaUndo, FaRegQuestionCircle, FaRegCreditCard } from 'react-icons/fa';
 import { CgProfile } from "react-icons/cg";
 import { BiArrowToLeft, BiArrowToRight } from "react-icons/bi";
 import { GiSandsOfTime } from "react-icons/gi";
@@ -31,7 +31,8 @@ const Sidebar = () => {
   return (
     <div className={`flex flex-col bg-blue-900 text-white rounded-r-lg mt-3 duration-300 
         ${isOpen ? 'w-64' : 'w-18'}
-        ${!isOpen ? 'sm:w-20 md:w-24' : 'sm:w-48 md:w-64'}`}>
+        ${!isOpen ? 'sm:w-20 md:w-24' : 'sm:w-48 md:w-64'}
+        max-h-[85vh] overflow-y-auto`}>
 
         <div className="flex items-center justify-between p-3">
         <img
@@ -40,9 +41,9 @@ const Sidebar = () => {
             alt={isOpen ? "Logo blanco" : "Logo icono"}
         />
         </div>
-      <nav className="flex flex-col flex-1 p-3">
+      <nav className="flex flex-col flex-1 p-3 space-y-1">
         <a href="#" className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
-          <FaHome size={24} />
+          <FaBox size={24} />
           <span className={`${isOpen ? 'block' : 'hidden'} ml-4`}>Order</span>
         </a>
         <a href="#" className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
@@ -67,7 +68,7 @@ const Sidebar = () => {
         </a>
       </nav>
 
-      <nav className="flex flex-col p-3">
+      <nav className="flex flex-col p-3 space-y-1">
         <a href="#" className="flex items-center py-2 px-4 hover:bg-white rounded hover:text-blue-800">
           <CgProfile size={24} />
           <span className={`${isOpen ? 'block' : 'hidden'} ml-4`}>Profile</span>
